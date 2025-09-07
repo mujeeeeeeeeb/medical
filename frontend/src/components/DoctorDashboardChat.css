@@ -1,0 +1,135 @@
+
+
+
+/* Shared Chat Styles for DoctorDashboard and PatientDashboard */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07), 0 1.5px 6px rgba(0,0,0,0.03);
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 16px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+  background: #f7f8fa;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+}
+
+.chat-message.sent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.chat-message.received {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.chat-sender {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+
+.chat-bubble {
+  padding: 10px 16px;
+  border-radius: 18px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 2px;
+  word-break: break-word;
+  transition: background 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.chat-message.sent .chat-bubble {
+  background: #2563eb;
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+
+.chat-message.received .chat-bubble {
+  background: #e5e7eb;
+  color: #222;
+  border-bottom-left-radius: 6px;
+}
+
+.chat-input-area {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  background: #fafbfc;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 22px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  background: #fff;
+}
+
+.chat-input:focus {
+  border-color: #2563eb;
+}
+
+.send-button {
+  margin-left: 10px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.send-button:hover,
+.send-button:focus {
+  background: #1746a2;
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .chat-messages {
+    padding: 12px 4px 8px 4px;
+    gap: 8px;
+  }
+  .chat-input-area {
+    padding: 7px 6px;
+  }
+}

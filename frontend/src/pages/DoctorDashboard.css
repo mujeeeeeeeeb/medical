@@ -1,0 +1,485 @@
+/* Reports Section */
+.report-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(22, 160, 133, 0.15);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: default;
+  align-items: flex-start;
+}
+
+.report-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(22, 160, 133, 0.28);
+}
+
+.report-card h3 {
+  margin-bottom: 12px;
+  color: #16a085;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.report-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.view-report-btn {
+  background: linear-gradient(90deg, #1abc9c 0%, #16a085 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.12);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin-top: auto;
+}
+
+.view-report-btn:hover, .view-report-btn:focus {
+  background: linear-gradient(90deg, #16a085 0%, #1abc9c 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 20px rgba(22, 160, 133, 0.18);
+}
+/* Doctor Dashboard Styling */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f9f9;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #1abc9c 0%, #16a085 100%);
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 15px rgba(22, 160, 133, 0.3);
+    position: relative;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 14px 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+
+  .sidebar ul li i {
+    margin-right: 15px;
+    font-size: 1.3rem;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .sidebar ul li:hover,
+  .sidebar ul li.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    overflow-y: auto;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    user-select: none;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .user-info span {
+    font-weight: 700;
+    color: #16a085;
+    font-size: 1.1rem;
+  }
+
+  .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #16a085;
+  }
+  
+  /* Section Titles */
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section h2 {
+    margin-bottom: 20px;
+    color: #16a085;
+    border-left: 6px solid #1abc9c;
+    padding-left: 15px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    user-select: none;
+  }
+  
+  /* Cards Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+/* Ensure .report-card fits well in .cards-grid */
+.cards-grid .report-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+  
+  /* Card */
+  .card {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(22, 160, 133, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(22, 160, 133, 0.3);
+  }
+
+  .card h3 {
+    margin-bottom: 15px;
+    color: #16a085;
+    font-weight: 700;
+    font-size: 1.3rem;
+    user-select: none;
+  }
+
+  .card p {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  /* Appointment & Prescription Layout */
+  .appointment-item,
+  .prescription-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: #444;
+    user-select: none;
+  }
+
+  .appointment-item:last-child,
+  .prescription-item:last-child {
+    border-bottom: none;
+  }
+
+  .appointment-item .details,
+  .prescription-item .details {
+    flex-grow: 1;
+  }
+
+  .appointment-item .time,
+  .prescription-item .date {
+    min-width: 110px;
+    text-align: right;
+    color: #16a085;
+    font-weight: 600;
+  }
+
+  .appointment-item:hover,
+  .prescription-item:hover {
+    background-color: #e8f6f3;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Appointment Status */
+  .status {
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    user-select: none;
+    display: inline-block;
+    min-width: 90px;
+    text-align: center;
+  }
+  
+  .status.booked {
+    background-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 8px #3498dbaa;
+  }
+  
+  .status.cancelled {
+    background-color: #e74c3c;
+    color: #fff;
+    box-shadow: 0 0 8px #e74c3caa;
+  }
+  
+  .status.completed {
+    background-color: #2ecc71;
+    color: #fff;
+    box-shadow: 0 0 8px #2ecc71aa;
+  }
+
+  /* Active Menu Highlight */
+  .sidebar ul li.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  }
+/* Chat Typing Section */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 400px;
+  background: #ece5dd;
+  padding: 16px;
+  overflow-y: auto;
+  border-radius: 14px 14px 0 0;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.chat-message {
+  max-width: 75%;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  box-shadow: 0 1px 1.5px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+  user-select: text;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.chat-message.sent {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  color: #202c33;
+}
+
+.chat-message.received {
+  background-color: #fff;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  color: #202c33;
+}
+
+.chat-message img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  margin-top: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.chat-message img:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.chat-timestamp {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 4px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.chat-message.sent .chat-timestamp {
+  text-align: right;
+}
+
+.chat-message.received .chat-timestamp {
+  text-align: left;
+}
+
+/* Sticky Chat Typing Bar */
+.chat-typing-container {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f0f0f0;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 14px 14px;
+  gap: 12px;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Attach button styling */
+.chat-attach-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #16a085;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+.chat-attach-btn:hover,
+.chat-attach-btn:focus {
+  background-color: rgba(22, 160, 133, 0.15);
+  outline: none;
+  color: #13856e;
+}
+
+/* Hide the default file input */
+.chat-file-input {
+  display: none;
+}
+
+/* Multi-line input with placeholder */
+.chat-typing-input {
+  flex: 1;
+  padding: 12px 18px;
+  border: 1.5px solid #d1e7e7;
+  border-radius: 24px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  color: #222;
+  min-width: 0;
+  resize: none;
+  max-height: 120px;
+  line-height: 1.4;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-typing-input::placeholder {
+  color: #999;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.chat-typing-input:focus {
+  border-color: #16a085;
+  box-shadow: 0 2px 8px rgba(22, 160, 133, 0.07);
+}
+
+/* Send button */
+.chat-send-btn {
+  background: linear-gradient(90deg, #1abc9c 0%, #16a085 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(22, 160, 133, 0.10);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+.chat-send-btn:hover, .chat-send-btn:focus {
+  background: linear-gradient(90deg, #16a085 0%, #1abc9c 100%);
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(22, 160, 133, 0.15);
+}
+
+@media (max-width: 600px) {
+  .chat-typing-container {
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .chat-typing-input {
+    font-size: 0.95rem;
+    max-height: 90px;
+  }
+  .chat-send-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .chat-attach-btn {
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+}
